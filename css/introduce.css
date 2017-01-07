@@ -1,0 +1,348 @@
+*{
+    padding:0;
+    margin:0;
+}
+html,body{
+    height:100%;
+}
+.da-header,.da-header-img,.da-mark,.da-content {
+    height:100%;
+}
+.da-header-img{
+    background-image: url("../img/introdudce01.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position:relative;
+}
+.da-header-img div.navbar{
+    background-color: #222;
+    margin-bottom: 0;
+    border:0;
+    color:#fff;
+}
+.da-header-img ul.navbar-nav{
+    line-height:50px;
+}
+.da-header-img ul.navbar-nav li{
+    margin-left: 10px;
+}
+.da-header-img div.navbar a{
+    color:#fff;
+}
+#top-menu ul>li.hover{
+    background:#D38629;
+}
+#top-menu li>a:hover{
+    color:#fff;
+}
+.da-mark{
+    background-color: rgba(0,0,0,.4);
+}
+.da-engineer{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.da-engineer {
+    text-align: center;
+    color:#fff;
+}
+.da-engineer h1{
+    font-size:5em;
+    color:#F4D03F;
+    margin-bottom:50px;
+}
+.da-engineer h1 b{
+    color:#fff;
+}
+.da-engineer h2 {
+    font-size:4em;
+}
+.da-info,.da-project,.da-profession{
+    padding:100px 0 50px 0;
+    text-align: center;
+}
+.da-info{
+    color:#fff;
+}
+.da-info{
+    background-image:-webkit-linear-gradient(to right,#666,#999);
+    background-image:-moz-linear-gradient(to right,#666,#999);
+    background-image:-o-linear-gradient(to right,#666,#999);
+    background-image:linear-gradient(to right,#666,#999);
+}
+.da-info:hover{
+    background-image:-webkit-linear-gradient(to left,#666,#999);
+    background-image:-moz-linear-gradient(to left,#666,#999);
+    background-image:-o-linear-gradient(to left,#666,#999);
+    background-image:linear-gradient(to left,#666,#999);
+}
+.da-info h1 {
+    margin-bottom:50px;
+    color:#fff;
+}
+.da-info-content{
+    margin-bottom:50px;
+}
+.da-info-img {
+    height:100px;
+}
+.da-info-img i{
+    display:inline-block;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-image:radial-gradient(50px at center center,#777B7F,#676B6F);
+    background-image:-webkit-radial-gradient(50px at center center,#777B7F,#676B6F);
+    background-image:-o-radial-gradient(50px at center center,#777B7F,#676B6F);
+    background-image:-moz-radial-gradient(50px at center center,#777B7F,#676B6F);
+    transition: all .3s linear;
+}
+.da-info-img:hover i{
+    transform: scale(1.2);
+}
+.da-info-content h3{
+    color:#F4D03F;
+}
+/*********** 项目经验  **************/
+.da-project {
+    background-image: linear-gradient(to bottom,#e1e1e1,#c4c4c4);
+}
+.da-project:hover {
+    background-image: linear-gradient(to top,#e1e1e1,#c4c4c4);
+}
+.da-project h1{
+    margin-bottom: 50px;
+}
+.da-project .container>p {
+    margin-bottom: 30px;
+}
+/**********  图片翻转效果   *************/
+@-webkit-keyframes flipOutYtest {
+    from {
+        -webkit-transform: perspective(1400px);
+        transform: perspective(1400px);
+    }
+
+    40% {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 60deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, 60deg);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 90deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, 90deg);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 180deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, 180deg);
+        opacity: 0;
+    }
+}
+
+.test{
+    -webkit-animation: flipOutYtest 0.75s linear;
+    animation: flipOutYtest 0.75s linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes flipInYtest {
+    from {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -180deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, -180deg);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -90deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, -90deg);
+        opacity: 0;
+    }
+
+    60% {
+        -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -60deg);
+        transform: perspective(1400px) rotate3d(0, 1, 0, -60deg);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: perspective(1400px);
+        transform: perspective(1400px);
+        opacity: 1;
+    }
+}
+
+.test2{
+    -webkit-animation: flipInYtest 0.75s linear;
+    animation: flipInYtest 0.75s linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.well-item{
+    position: relative;
+}
+.correct {
+    position: absolute;
+    top:0;
+    left:0;
+}
+.opposite{
+    display: table;
+}
+@media screen and (min-width: 1200px){
+    .correct img{
+        width:292px;
+    }
+    .opposite div{
+        min-height: 389px;
+        width: 292px;
+    }
+}
+@media screen and (max-width:1199px) and (min-width: 992px ) {
+    .correct img{
+        width:242px;
+    }
+     .opposite div{
+        min-height: 323px;
+        width: 242px;
+
+    }
+}
+@media screen and (max-width:991px) and (min-width: 768px ) {
+    .correct img{
+        width:370px;
+    }
+     .opposite div{
+        min-height: 493px;
+        width: 370px;
+
+    }
+}
+@media screen and (max-width:767px) {
+    .correct img{
+        width:100%;
+        height:360px;
+    }
+     .opposite div{
+        min-height: 360px;
+        width: 100%;
+
+    }
+}
+/*
+.opposite div{
+  min-height: 250px;
+  width: 100%;
+}
+.opposite-content{
+  display: table;
+  width: 100%;
+  min-height: 250px;
+  background-color: #D95E22;
+}*/
+.opposite-content-text{
+    display:block;
+    color: white;
+    background-color: #888;
+    padding:20px 10px;
+}
+.opposite-content-text h4{
+    margin-top:0;
+    text-align: left;
+}
+.opposite-content-text p{
+    margin-bottom:10px;
+    text-align: justify;
+}
+.opposite-content-text p.text-main{
+    font-weight:bold;
+    font-size:16px;
+    margin-top:50px;
+    text-align:center;
+}
+/*********专业技能块 *********/
+.da-profession {
+    background-color: #f1f1f1;
+}
+.da-profession h1{
+    margin-bottom: 30px;
+}
+.pro-content dl{
+    padding:20px 10px;
+}
+.pro-content dl dt{
+    position:relative;
+}
+.pro-content dt span{
+    display: inline-block;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border:10px solid #aaa;
+    box-sizing: border-box;
+    font-size: 40px;
+    line-height:130px;
+    color:#D38629;
+}
+.pro-content dt canvas {
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: transparent;
+}
+.pro-content dd.dd-color {
+    color:#D38629;
+    margin:10px 0;
+    font-size: 1.5em;
+}
+/********* 工作经验  ***********/
+.da-experience {
+    padding:100px 0 50px 0;
+    background-color: #F0AF5A;
+    color:#333;
+}
+/********* 个人评价 ***********/
+.da-self{
+    height:100%;
+    background-image: url("../img/person.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-repeat: no-repeat;*/
+    position: relative;
+    color: #ddd;
+    padding: 80px 0;
+}
+.da-self h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.da-self h2.connect-text {
+    color:#666;
+}
+.da-connect {
+    position:absolute;
+    bottom:50px;
+    width:100%;
+    height:300px;
+    background-color: #bbb;
+}
+.da-footer {
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height:50px;
+    line-height:50px;
+    background-color: #222;
+    color:#fff;
+}
+.da-footer button{
+    background-color: #666;
+}
